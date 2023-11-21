@@ -82,7 +82,7 @@ function Character({ data: characters }: NameProps) {
           >
             <span>
               <Image
-                src={`/../img/${characters?.name}.png`}
+                src={`/../img/${characters?.name}.webp`}
                 fill={true}
                 alt=''
               />
