@@ -11,8 +11,8 @@ import {
 } from "@/shared/Api/axios-hooks";
 import { AsideBar } from "@/Components/AsideBar/AsideBar";
 import { CharacterCard } from "@/Components/CharacterCard/CharacterCard";
-import { useParams, usePathname} from "next/navigation";
-import {  GetStaticProps } from "next";
+import { useParams, usePathname } from "next/navigation";
+import { GetStaticProps } from "next";
 type NameProps = {
   data: CharactersTypes;
 };
@@ -111,7 +111,9 @@ function Character({ data: characters }: NameProps) {
               </li>
             </ul>
           </section>
-          <div className={s.Right_Aside}>{/* <AsideBar /> */}</div>
+          <div className={s.Right_Aside}>
+            <AsideBar />
+          </div>
         </div>
       </article>
 
