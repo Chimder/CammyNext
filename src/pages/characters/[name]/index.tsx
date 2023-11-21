@@ -81,7 +81,7 @@ function Character({ data: characters }: NameProps) {
             )}
           >
             <span>
-              <Image src={`/img/${characters?.name}.png`} fill={true} alt='' />
+              <Image src={`/img/${characters?.name}.webp`} fill={true} alt='' />
             </span>
           </div>
           <section className={s.Second_section}>
