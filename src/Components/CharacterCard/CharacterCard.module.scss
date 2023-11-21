@@ -1,0 +1,71 @@
+$small: 768px;
+$max: 770px;
+
+
+.CharacterLi {
+  display: flex;
+  justify-content: center;
+  width: min(8.3333333333vw, 160px);
+  padding: 0;
+  margin: 0 0 min(1.5625vw, 30px) min(10.4166666667vw, 200px);
+  border: 0;
+  opacity: 1;
+  transform: translate(0, 0);
+  rotate: none;
+  scale: none;
+  translate: none;
+
+  a {
+    display: block;
+    flex-shrink: 0;
+    width: min(29.9479166667vw, 575px);
+    height: min(32.5520833333vw, 625px);
+    clip-path: polygon(
+      min(12.2395833333vw, 235px) 0,
+      min(29.9479166667vw, 575px) 0,
+      min(17.7083333333vw, 340px) min(32.5520833333vw, 625px),
+      0 min(32.5520833333vw, 625px)
+    );
+    background-size: 100%;
+  }
+}
+
+.CharacterLi_small {
+  display: flex;
+  justify-content: center;
+  width: min(8.3333333333vw, 160px);
+  margin: 0 0 min(0.5208333333vw, 10px) calc(1px - min(0.78125vw, 15px));
+
+  a {
+    display: block;
+    flex-shrink: 0;
+    width: min(12.34375vw, 237px);
+    height: min(13.28125vw, 255px);
+    clip-path: polygon(
+      min(5.0520833333vw, 97px) 0,
+      min(12.34375vw, 237px) 0,
+      min(7.5520833333vw, 145px) min(13.28125vw, 255px),
+      0 min(13.28125vw, 255px)
+    );
+    text-decoration: none;
+    background-size: 100%;
+    transition: background 0.3s;
+  }
+}
+
+.CharacterImg:hover {
+  display: block;
+  flex-shrink: 0;
+  width: min(29.9479166667vw, 575px);
+  height: min(32.5520833333vw, 625px);
+  background-size: 100%;
+}
+
+.CharacterImg_small:hover {
+  display: block;
+  flex-shrink: 0;
+  width: min(12.34375vw, 237px);
+  height: min(13.28125vw, 255px);
+  background-size: 100%;
+
+}

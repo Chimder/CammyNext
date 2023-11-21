@@ -1,0 +1,49 @@
+$small: 768px;
+
+.contents {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+
+}
+
+.contents_into {
+  position: relative;
+  overflow: hidden;
+  background: url("https://www.streetfighter.com/6/assets/images/character/bg_character.jpg")
+    no-repeat top;
+  background-size: min(100vw, 1920px);
+}
+
+.select_CH {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: min(208.3333333333vw, 4000px);
+  overflow: hidden;
+}
+
+.main_h1 {
+  position: absolute;
+  top: min(10.4166666667vw, 200px);
+  left: calc(50% - min(46.875vw, 900px));
+  z-index: 20;
+  font-size: 100px;
+}
+
+.Characters {
+  position: absolute;
+  top: min(25.3125vw, 486px);
+  right: 50%;
+  width: min(86.9791666667vw, 1670px);
+  transform: translateX(50%);
+
+  ul {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+}
+
