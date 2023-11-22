@@ -27,10 +27,10 @@ export const getStaticPaths = async () => {
     fallback: false,
   };
 };
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
-    const name = String(params?.name);
-    const data = await getCharacter(name);
+    const data = await getCharacter(params?.name as string);
     return { props: { data } };
   } catch (error) {
     console.error(error);
@@ -42,44 +42,20 @@ function Character({ data: characters }: NameProps) {
   const pathname = usePathname();
   const param = useParams();
 
-  // const { data: characters, refetch } = useQuery({
-  //   queryKey: ["character"],
-  //   queryFn: async () => GetCharacter(param.name),
-  // });
-
   const CH = 2;
-
   const backgr = {
-    backgroundImage: `url(../img/bg_${characters?.name}.jpg)`,
+    backgroundImage: `url(../img/bg_${characters?.name}.webp)`,
     backgroundRepeat: "no-repeat",
   };
 
+  const mainIMG = characters?.main
+    ? `Main_img_CH_${characters.main}`
+    : "Main_img_CH";
   return (
     <main className={s.Main_Character}>
       <article style={backgr}>
         <div className={s.Main_div}>
-          <div
-            className={clsx(
-              s.Main_img_CH,
-              characters?.main === 1
-                ? s.Main_img_CH_1
-                : characters?.main === 2
-                ? s.Main_img_CH_2
-                : characters?.main === 3
-                ? s.Main_img_CH_3
-                : characters?.main === 4
-                ? s.Main_img_CH_4
-                : characters?.main === 5
-                ? s.Main_img_CH_5
-                : characters?.main === 6
-                ? s.Main_img_CH_6
-                : characters?.main === 7
-                ? s.Main_img_CH_7
-                : characters?.main === 8
-                ? s.Main_img_CH_8
-                : s.Main_img_CH
-            )}
-          >
+          <div className={clsx(s.Main_img_CH, mainIMG)}>
             <span>
               <Image src={`/img/${characters?.name}.webp`} fill={true} alt='' />
             </span>
@@ -133,4 +109,5 @@ function Character({ data: characters }: NameProps) {
     </main>
   );
 }
+
 export default Character;

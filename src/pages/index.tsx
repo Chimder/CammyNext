@@ -21,22 +21,22 @@ export default function Home() {
               <ul className={s.main_ul1}>
                 <li>
                   <span>
-                    <Image src='/img/PS5.png' fill={true} alt='' />
+                    <Image src='/img/PS5.webp' fill={true} alt='' />
                   </span>
                 </li>
                 <li>
                   <span>
-                    <Image src='/img/PS4.png' fill={true} alt='' />
+                    <Image src='/img/PS4.webp' fill={true} alt='' />
                   </span>
                 </li>
                 <li className={s.xbox}>
                   <span>
-                    <Image src='/img/XBOX.png' fill={true} alt='' />
+                    <Image src='/img/XBOX.webp' fill={true} alt='' />
                   </span>
                 </li>
                 <li className={s.steam}>
                   <span>
-                    <Image src='/img/Steam.png' fill={true} alt='' />
+                    <Image src='/img/Steam.webp' fill={true} alt='' />
                   </span>
                 </li>
               </ul>
@@ -102,7 +102,7 @@ export default function Home() {
           </section>
           <section className={s.section2}>
             <h1>
-              <Image src='/img/LOGO.png' fill={true} alt='' />
+              <Image src='/img/LOGO.webp' fill={true} alt='' />
             </h1>
             <div></div>
           </section>

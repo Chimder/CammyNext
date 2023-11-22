@@ -1,0 +1,376 @@
+.Main_Single {
+  color: white;
+}
+
+.Main_Character {
+  position: relative;
+  z-index: 500;
+  width: 100%;
+  overflow: hidden;
+
+  article {
+    position: relative;
+    z-index: 100;
+    background-size: min(104.1666666667vw, 2000px) auto;
+  }
+}
+
+.Main_div {
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: min(93.75vw, 2000px) auto;
+  padding: min(8.3333333333vw, 160px) min(3.125vw, 60px) 0;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.Main_img_CH_Zoom_10 {
+  top: min(10.4479166667vw, -310px) !important;
+  left: calc(50% - min(49.0625vw, 920px)) !important;
+  width: min(77.7083333333vw, 1492px) !important;
+  height: min(88.1770833333vw, 1693px) !important;
+}
+
+.Main_img_CH {
+  position: absolute;
+  top: min(5.2083333333vw, 100px);
+  left: calc(50% - min(30.7291666667vw, 590px));
+  width: min(57.2916666667vw, 1100px);
+  height: min(69.0104166667vw, 1325px);
+
+  span {
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    display: block;
+    width: initial;
+    height: initial;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: none;
+    border: 0;
+    opacity: 1;
+
+    img {
+      position: absolute;
+      inset: 0;
+      box-sizing: border-box;
+      display: block;
+      width: 0;
+      min-width: 100%;
+      max-width: 100%;
+      height: 0;
+      min-height: 100%;
+      max-height: 100%;
+      padding: 0;
+      margin: auto;
+      border: none;
+      object-fit: contain;
+    }
+  }
+}
+
+.Main_img_CH_Zoom_2 {
+  top: min(7.7083333333vw, -120px) !important;
+  left: calc(50% - min(39.0625vw, 850px)) !important;
+  width: min(77.7083333333vw, 1492px) !important;
+  height: min(88.1770833333vw, 1693px) !important;
+}
+
+.Main_img_CH_Zoom_3 {
+  top: min(7.7083333333vw, -120px) !important;
+  left: calc(50% - min(49.0625vw, 850px)) !important;
+  width: min(77.7083333333vw, 1492px) !important;
+  height: min(88.1770833333vw, 1693px) !important;
+}
+
+.Main_img_CH_Zoom_4 {
+  top: min(10.4479166667vw, -10px) !important;
+  left: calc(50% - min(49.0625vw, 850px)) !important;
+  width: min(77.7083333333vw, 1492px) !important;
+  height: min(88.1770833333vw, 1693px) !important;
+}
+
+.Main_img_CH_Zoom_5 {
+  top: min(10.4479166667vw, -200px) !important;
+  left: calc(50% - min(49.0625vw, 850px)) !important;
+  width: min(80.7083333333vw, 1700px) !important;
+  height: min(88.1770833333vw, 1800px) !important;
+}
+
+.Main_img_CH_Zoom_6 {
+  top: min(10.4479166667vw, -180px) !important;
+  left: calc(50% - min(65.0625vw, 1000px)) !important;
+  width: min(77.7083333333vw, 1492px) !important;
+  height: min(88.1770833333vw, 1693px) !important;
+}
+
+.Main_img_CH_Zoom_7 {
+  top: min(10.4479166667vw, -550px) !important;
+  left: calc(50% - min(49.0625vw, 650px)) !important;
+  width: min(77.7083333333vw, 1492px) !important;
+  height: min(88.1770833333vw, 1693px) !important;
+}
+
+.Main_img_CH_Zoom_8 {
+  top: min(10.4479166667vw, -450px) !important;
+  left: calc(50% - min(49.0625vw, 450px)) !important;
+  width: min(77.7083333333vw, 1492px) !important;
+  height: min(88.1770833333vw, 1693px) !important;
+}
+
+.Main_img_CH_Zoom_9 {
+  top: min(10.4479166667vw, -100px) !important;
+  left: calc(50% - min(49.0625vw, 680px)) !important;
+  width: min(77.7083333333vw, 1492px) !important;
+  height: min(88.1770833333vw, 1693px) !important;
+}
+
+.Main_img_CH_Zoom_1 {
+  top: min(-16.6666666667vw, -320px) !important;
+  left: calc(50% - min(39.0625vw, 750px)) !important;
+  width: min(77.7083333333vw, 1492px) !important;
+  height: min(88.1770833333vw, 1693px) !important;
+}
+
+
+.Second_section {
+  position: relative;
+  display: block;
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+  list-style: none;
+
+  h1 {
+    position: relative;
+    margin: 0 0 min(4.9479166667vw, 95px);
+    font-size: min(1.0416666667vw, 20px);
+
+    &::before {
+      position: absolute;
+      top: min(2.4479166667vw, 47px);
+      left: min(0vw, 0px);
+      width: min(0.15625vw, 3px);
+      height: 1px;
+      content: "";
+      background: #ffffff;
+    }
+
+    &::after {
+      position: absolute;
+      top: min(2.4479166667vw, 47px);
+      left: min(0.2083333333vw, 4px);
+      width: min(2.6041666667vw, 50px);
+      height: 1px;
+      content: "";
+      background: #ffffff;
+    }
+  }
+
+  h2 {
+    font-size: 110px;
+  }
+
+  p {
+    position: relative;
+    display: block;
+    width: min(23.4375vw, 450px);
+    padding: 0 0 0 min(1.0416666667vw, 20px);
+    margin: 0 0 min(3.125vw, 60px);
+    font-size: min(1.0416666667vw, 20px);
+    text-shadow: 0 0 20px rgb(0 0 0 / 50%), 0 0 20px rgb(0 0 0 / 50%),
+      0 0 20px rgb(0 0 0 / 50%), 0 0 20px rgb(0 0 0 / 50%);
+
+    &::before {
+      position: absolute;
+      top: min(0vw, 0px);
+      left: min(0vw, 0px);
+      width: min(0.2083333333vw, 4px);
+      height: min(1.3541666667vw, 26px);
+      content: "";
+      background: #ffffff;
+    }
+
+    &::after {
+      position: absolute;
+      top: min(1.5625vw, 30px);
+      left: min(0vw, 0px);
+      width: min(0.2083333333vw, 4px);
+      height: calc(100% - min(1.4583333333vw, 28px));
+      content: "";
+      background: hsl(0deg 0% 100% / 50%);
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.spanOne {
+  box-sizing: border-box;
+  display: block;
+  width: min(7.7083333333vw, 148px);
+  padding: min(0.1041666667vw, 2px) min(0.5208333333vw, 10px);
+  margin: 0 min(0.2604166667vw, 5px) min(0.78125vw, 15px) 0;
+  font-size: min(1.0416666667vw, 20px);
+  line-height: 1.2;
+  color: #bb82ff;
+  text-align: right;
+  background: #000000;
+  border-left: 1px solid hsl(0deg 0% 100% / 60%);
+}
+
+.spanTwo {
+  box-sizing: border-box;
+  display: block;
+  padding: min(0.1041666667vw, 2px) min(0.5208333333vw, 10px);
+  margin: 0 0 min(0.5208333333vw, 10px);
+  font-size: min(0.9375vw, 18px);
+  color: #ffffff;
+  text-align: left;
+  background: #000000;
+}
+
+.Right_Aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: min(0.3125vw, 6px) 0 0;
+}
+
+.SectionCombo {
+  position: relative;
+  z-index: 200;
+  padding: 0 0 min(10.4166666667vw, 200px);
+  background: url("https://www.streetfighter.com/6/assets/images/character/bg_character_frame.png")
+    no-repeat top/cover;
+  background-attachment: fixed;
+}
+
+.Article_Two_Select {
+  display: block;
+  padding-top: min(13.037809648vw, 100px);
+  margin: 0 0 min(9.375vw, 180px);
+
+
+  dl {
+    position: relative;
+    padding: 0 0 min(2.7604166667vw, 53px);
+    background: url("https://www.streetfighter.com/6/assets/images/character/interface_bottom.png")
+      no-repeat bottom/min(98.28125vw, 1887px);
+
+    dt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min(98.28125vw, 1887px);
+      min-height: min(5.625vw, 108px);
+      margin: 0 0 min(1.8229166667vw, 35px);
+      margin-right: auto;
+      margin-left: auto;
+      background: url("https://www.streetfighter.com/6/assets/images/character/interface_top.png")
+        no-repeat bottom/min(98.28125vw, 1887px);
+
+      span {
+        font-family: Oswald, sans-serif;
+        font-size: min(2.0833333333vw, 40px);
+        color: #ffffff;
+        text-shadow: 0 0 min(0.5208333333vw, 10px) #7a2ecf,
+          0 0 min(0.5208333333vw, 10px) #7a2ecf;
+        letter-spacing: min(0.1302083333vw, 2.5px);
+        filter: drop-shadow(0 0 min(1.0416666667vw, 20px) #000000);
+      }
+    }
+  }
+}
+
+.Article_Two_dd {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  border: 0;
+}
+
+.Article_Two_List_character {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: min(63.0208333333vw, 1210px);
+  margin: 0 auto;
+  list-style: none;
+
+}
+
+.Outfit_Section {
+  position: relative;
+  padding: 0 0 min(10.4166666667vw, 200px);
+  padding-bottom: 0 !important;
+  background: none;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background: linear-gradient(325deg, #1c1821, #9500db 50%, #1c1821);
+  }
+
+  &::after {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background: linear-gradient(325deg, #1c1821, #9500db 50%, #1c1821);
+  }
+}
+
+.BackBtn {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  vertical-align: baseline;
+  border: 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(36.4583333333vw, 700px);
+    height: min(7.03125vw, 135px);
+    margin: min(2.6041666667vw, 50px) auto 0;
+    color: #ffffff;
+    text-decoration: none;
+    background: rgb(0 0 0 / 60%);
+    border: 1px solid hsl(0deg 0% 100% / 40%);
+    transition: all 0.3s;
+
+    span {
+      padding: min(2.0833333333vw, 40px) 0 0;
+      font-family: Oswald, sans-serif;
+      font-size: min(0.9375vw, 18px);
+      text-align: center;
+      background: url("https://www.streetfighter.com/6/assets/images/character/arrow_back.png")
+        no-repeat top;
+      background-size: min(1.0416666667vw, 20px) !important;
+    }
+  }
+}

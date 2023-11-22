@@ -1,0 +1,522 @@
+.SectionComboInto {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: min(83.3333333333vw, 1600px);
+  margin: min(0vw, 0px) auto 0;
+}
+
+.moveList_area {
+  position: relative;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: min(54.6875vw, 1050px);
+  padding-top: min(4.1666666667vw, 80px);
+  margin-right: min(-33.3333333333vw, -640px);
+}
+
+.moveList_h {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: min(0.8333333333vw, 16px) min(0.5208333333vw, 10px);
+  margin: 0 0 min(1.5625vw, 30px);
+  font-size: min(1.1458333333vw, 22px);
+  color: white;
+  text-align: center;
+  background: #8917ab;
+  background: linear-gradient(
+    90deg,
+    rgb(137 23 171 / 0%),
+    rgb(137 23 171 / 50%) 18%,
+    rgb(234 0 255 / 50%) 50%,
+    rgb(137 23 171 / 50%) 88%,
+    rgb(137 23 171 / 0%)
+  );
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    font-size: min(1.1458333333vw, 22px);
+    text-align: center;
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgb(168 17 211 / 0%),
+      #a811d3 18%,
+      #a811d3 50%,
+      #a811d3 88%,
+      rgb(168 17 211 / 0%)
+    );
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 2px;
+    font-size: min(1.1458333333vw, 22px);
+    text-align: center;
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgb(168 17 211 / 0%),
+      #a811d3 18%,
+      #a811d3 50%,
+      #a811d3 88%,
+      rgb(168 17 211 / 0%)
+    );
+  }
+}
+
+.moveList_ul {
+  width: 100%;
+  margin: 0 0 min(2.6041666667vw, 50px);
+  list-style: none;
+}
+
+.moveList_li {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 min(1.3020833333vw, 25px);
+  line-height: 1;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #420862,
+    #24007f 25%,
+    #24007f 50%,
+    #24007f 75%,
+    #420862
+  );
+  border: 2px solid #9636b2;
+}
+
+.moveList_li_active {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 min(1.3020833333vw, 25px);
+  line-height: 1;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #d32dcf,
+    #6a1399 10%,
+    #370587 40%,
+    #370587 60%,
+    #6a1399 90%,
+    #d32dcf
+  );
+  border: 2px solid #f9f5fb;
+  box-shadow: 0 0 30px -5px #9c67f0;
+}
+
+.moveList_li_combo {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-bottom: min(1.3020833333vw, 25px);
+  margin-left: 10%;
+  line-height: 1;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #420862,
+    #24007f 25%,
+    #24007f 50%,
+    #24007f 75%,
+    #420862
+  );
+  border: 2px solid #9636b2;
+
+  &::before {
+    position: absolute;
+    top: calc(min(-1.3020833333vw, -20px) + 2px);
+    left: -7%;
+    display: block;
+    width: 5%;
+    height: calc(150% - 2px);
+    content: "";
+    background: none !important;
+    border-left: 3px solid #8a31ab;
+  }
+
+  &::after {
+    position: absolute;
+    top: min(-1.3020833333vw, -25px);
+    left: -7%;
+    display: block;
+    width: 5%;
+    height: 60%;
+    content: "";
+    background: url("https://www.streetfighter.com/6/assets/images/common/controller/arrow_6.png")
+      no-repeat 100% 100% !important;
+  }
+}
+
+.moveList_li_combo_active {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-bottom: min(1.3020833333vw, 25px);
+  margin-left: 10%;
+  line-height: 1;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #d32dcf,
+    #6a1399 10%,
+    #370587 40%,
+    #370587 60%,
+    #6a1399 90%,
+    #d32dcf
+  );
+  border: 2px solid #f9f5fb;
+  box-shadow: 0 0 30px -5px #9c67f0;
+
+  &::before {
+    position: absolute;
+    top: calc(min(-1.3020833333vw, -20px) + 2px);
+    left: -7%;
+    display: block;
+    width: 5%;
+    height: calc(150% - 2px);
+    content: "";
+    background: none !important;
+    border-left: 3px solid #8a31ab;
+  }
+
+  &::after {
+    position: absolute;
+    top: min(-1.3020833333vw, -25px);
+    left: -7%;
+    display: block;
+    width: 5%;
+    height: 60%;
+    content: "";
+    background: url("https://www.streetfighter.com/6/assets/images/common/controller/arrow_6.png")
+      no-repeat 100% 100% !important;
+  }
+}
+
+.moveList_li_combo_end {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-bottom: min(1.3020833333vw, 25px);
+  margin-left: 10%;
+  line-height: 1;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #420862,
+    #24007f 25%,
+    #24007f 50%,
+    #24007f 75%,
+    #420862
+  );
+  border: 2px solid #9636b2;
+
+  &::before {
+    position: absolute;
+    top: calc(min(-1.3020833333vw, -25px) + 2px);
+    left: -7%;
+    z-index: 1;
+    display: block;
+    width: 5%;
+    height: calc(60% - 2px);
+    font: inherit;
+    line-height: 1;
+    cursor: pointer;
+    content: "";
+    background: none !important;
+    border-left: 3px solid #8a31ab;
+  }
+
+  &::after {
+    position: absolute;
+    top: min(-1.3020833333vw, -25px);
+    left: -7%;
+    display: block;
+    width: 5%;
+    height: 60%;
+    line-height: 1;
+    cursor: pointer;
+    content: "";
+    background: url("https://www.streetfighter.com/6/assets/images/common/controller/arrow_6.png")
+      no-repeat 100% 100% !important;
+  }
+}
+
+.moveList_li_combo_end_active {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-bottom: min(1.3020833333vw, 25px);
+  margin-left: 10%;
+  line-height: 1;
+  list-style: none;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #d32dcf,
+    #6a1399 10%,
+    #370587 40%,
+    #370587 60%,
+    #6a1399 90%,
+    #d32dcf
+  );
+  border: 2px solid #f9f5fb;
+  box-shadow: 0 0 30px -5px #9c67f0;
+
+  &::before {
+    position: absolute;
+    top: calc(min(-1.3020833333vw, -25px) + 2px);
+    left: -7%;
+    z-index: 1;
+    display: block;
+    width: 5%;
+    height: calc(60% - 2px);
+    font: inherit;
+    line-height: 1;
+    cursor: pointer;
+    content: "";
+    background: none !important;
+    border-left: 3px solid #8a31ab;
+  }
+
+  &::after {
+    position: absolute;
+    top: min(-1.3020833333vw, -25px);
+    left: -7%;
+    display: block;
+    width: 5%;
+    height: 60%;
+    line-height: 1;
+    cursor: pointer;
+    content: "";
+    background: url("https://www.streetfighter.com/6/assets/images/common/controller/arrow_6.png")
+      no-repeat 100% 100% !important;
+  }
+}
+
+.moveList_li_div {
+  padding: min(0.5208333333vw, 10px) min(1.5625vw, 30px);
+
+  span {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    width: initial;
+    max-width: 100%;
+    height: initial;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: none;
+    border: 0;
+    opacity: 1;
+
+    span {
+      box-sizing: border-box;
+      display: block;
+      width: initial;
+      max-width: 100%;
+      height: initial;
+      padding: 0;
+      margin: 0;
+      background: none;
+      border: 0;
+      opacity: 1;
+
+      img {
+        inset: 0;
+        box-sizing: border-box;
+        display: block;
+        width: min(10.4166666667vw, 200px) !important;
+        min-width: min(10.4166666667vw, 200px) !important;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+        padding: 0;
+        margin: auto;
+        border: none;
+      }
+    }
+  }
+}
+
+.comboArrow {
+  padding: min(0.5208333333vw, 10px);
+}
+
+.comboArrow_arts {
+  display: block;
+  margin: 0 0 min(0.5208333333vw, 10px);
+  font-size: min(0.9375vw, 18px);
+  line-height: 1.5;
+  color: white;
+}
+
+.comboArrows {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  padding-right: min(1.5625vw, 30px);
+  margin: 0;
+  font-size: 100;
+  line-height: 1.5;
+  border: 0;
+
+  img {
+    display: inline-block;
+    width: min(1.5625vw, 30px);
+    margin: 0 min(0.15625vw, 3px);
+  }
+}
+
+.moveList_drive {
+  position: absolute;
+  top: min(1.0416666667vw, 20px);
+  right: min(1.0416666667vw, 20px);
+  z-index: -1;
+  width: min(10.4166666667vw, 200px);
+
+  span {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: initial;
+    height: initial;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: none;
+    border: 0;
+    opacity: 1;
+
+    img {
+      position: relative;
+      inset: 0;
+      box-sizing: border-box;
+      display: block;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      padding: 0;
+      margin: auto;
+      border: none;
+    }
+  }
+}
+
+.moveList_video {
+  position: absolute;
+  top: min(4.1666666667vw, 80px);
+  left: 50%;
+  margin-left: min(15.625vw, 300px);
+  transition: all 0.25s;
+}
+
+.moveList_video_fix {
+  position: fixed !important;
+  top: min(10.4166666667vw, 200px);
+  left: 50%;
+  margin-left: min(15.625vw, 300px);
+  transition: all 1s;
+}
+
+.moveList_video_fix_end {
+  position: absolute !important;
+  top: auto !important;
+  bottom: min(4.1666666667vw, 80px) !important;
+  left: 50%;
+  margin-left: min(15.625vw, 300px);
+  transition: all 0.25s;
+}
+
+.moveList_video_box {
+  display: flex;
+  align-items: stretch;
+  width: min(25vw, 480px);
+  height: min(14.5833333333vw, 280px);
+  padding: min(0.2604166667vw, 5px);
+  margin: 0 0 min(1.0416666667vw, 20px);
+  background: #32046f;
+  border: 3px solid #331167;
+  border-radius: 10px;
+  border-image: linear-gradient(180deg, #4c2ea5 0, #331167 50%, #4c2ea5);
+  border-image-slice: 1;
+  box-shadow: 0 0 15px -5px #5a1dbb;
+}
+
+.moveList_video_box_inner {
+  width: 100%;
+  padding: min(0.5208333333vw, 10px);
+  border: 3px solid #331167;
+  border-radius: 10px;
+  border-image: linear-gradient(180deg, #4c2ea5 0, #331167 50%, #4c2ea5);
+  border-image-slice: 1;
+  box-shadow: 0 0 15px -5px #5a1dbb;
+}
+
+.moveList_skill_video_box {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.moveList_skill_video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+}
+
+.moveList_video_text {
+  display: flex;
+  align-items: stretch;
+  width: min(25vw, 480px);
+  min-height: min(14.0625vw, 270px);
+  padding: min(0.2604166667vw, 5px);
+  background: #32046f;
+  border: 3px solid #331167;
+  border-radius: 10px;
+  border-image: linear-gradient(180deg, #4c2ea5 0, #331167 50%, #4c2ea5);
+  border-image-slice: 1;
+  box-shadow: 0 0 15px -5px #5a1dbb;
+}
+
+.moveList_video_text_inner {
+  width: 100%;
+  padding: min(1.0416666667vw, 20px);
+  border: 3px solid #331167;
+  border-radius: 10px;
+  border-image: linear-gradient(180deg, #4c2ea5 0, #331167 50%, #4c2ea5);
+  border-image-slice: 1;
+  box-shadow: 0 0 15px -5px #5a1dbb;
+}

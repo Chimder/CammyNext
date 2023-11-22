@@ -14,8 +14,8 @@ export type Combo = {
   _id?: string;
 };
 type Video = {
-  comboName: string;
-  video: string;
+  comboName?: string;
+  video?: string;
   _id?: string;
 };
 export type CharactersTypes = {

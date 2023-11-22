@@ -24,7 +24,7 @@ export function Header() {
           <Link href='/'>
             <span>
               <span>
-                <Image src='/img/H_logo.png' fill={true} alt='aada' />
+                <Image src='/img/H_logo.webp' fill={true} alt='aada' />
               </span>
             </span>
           </Link>
@@ -85,7 +85,7 @@ export function Header() {
               <span className={s.buckler_span_span}>
                 <span>
                   <span></span>
-                  <Image src='/img/icon_lock.png' fill={true} alt='' />
+                  <Image src='/img/icon_lock.webp' fill={true} alt='' />
                 </span>
               </span>
             </span>

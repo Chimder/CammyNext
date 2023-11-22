@@ -1,9 +1,13 @@
 import Link from "next/link";
 import s from "./AsideBar.module.scss";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 export function AsideBar() {
-  const name = useParams();
+  const param = useParams();
+  const pathname = usePathname();
+  const router = useRouter();
+  console.log(router.query.name);
 
   return (
     <aside className={s.Aside_into}>
@@ -12,13 +16,15 @@ export function AsideBar() {
       </p>
       <ul className={s.Link_to_All}>
         <li style={{ flexBasis: "15%" }}>
-          <Link href={`/characters/${name}`}>TOP</Link>
+          <Link href={`/characters/${router.query.name}`}>TOP</Link>
         </li>
         <li style={{ flexBasis: "55%" }}>
-          <Link href={`/characters/${name}/movelist`}>COMMAND LIST</Link>
+          <Link href={`/characters/${router.query.name}/movelist`}>
+            COMMAND LIST
+          </Link>
         </li>
         <li style={{ flexBasis: "30%" }}>
-          <Link href={`/characters/${name}/outfit`}>COSTUME</Link>
+          <Link href={`/characters/${router.query.name}/outfit`}>COSTUME</Link>
         </li>
       </ul>
     </aside>

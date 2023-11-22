@@ -12,7 +12,7 @@ export function Footer() {
       <section className={s.footer_section}>
         <p className={s.logo}>
           <span>
-            <Image src='/img/F_logo.png' fill={true} alt='' />
+            <Image src='/img/F_logo.webp' fill={true} alt='' />
             <span></span>
           </span>
         </p>
@@ -24,25 +24,25 @@ export function Footer() {
               <li>
                 <span>
                   <span></span>
-                  <Image src='/img/PS5.png' width={90} height={24} alt='' />
+                  <Image src='/img/PS5.webp' width={90} height={24} alt='' />
                 </span>
               </li>
               <li>
                 <span>
                   <span></span>
-                  <Image src='/img/PS4.png' width={90} height={24} alt='' />
+                  <Image src='/img/PS4.webp' width={90} height={24} alt='' />
                 </span>
               </li>
               <li>
                 <span>
                   <span></span>
-                  <Image src='/img/XBOX.png' width={200} height={26} alt='' />
+                  <Image src='/img/XBOX.webp' width={200} height={26} alt='' />
                 </span>
               </li>
               <li>
                 <span>
                   <span></span>
-                  <Image src='/img/Steam.png' width={100} height={26} alt='' />
+                  <Image src='/img/Steam.webp' width={100} height={26} alt='' />
                 </span>
               </li>
             </ul>
@@ -61,7 +61,7 @@ export function Footer() {
               <a href=''>
                 <span>
                   <span></span>
-                  <Image fill={true} src='/img/TEEN.png' alt='' />
+                  <Image fill={true} src='/img/TEEN.webp' alt='' />
                 </span>
               </a>
             </div>
