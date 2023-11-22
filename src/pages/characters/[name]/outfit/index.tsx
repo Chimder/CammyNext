@@ -1,21 +1,22 @@
 import clsx from "clsx";
-import React from "react";
-import AsideBar from "@/Components/AsideBar/AsideBar";
-import ComboListArea from "@/Components/MoveList/ComboListArea";
-import CharacterCard from "@/Components/CharacterCard/CharacterCard";
-import Link from "next/link";
-import { GetStaticProps } from "next";
+import { useState } from "react";
 import {
   CharactersTypes,
   getCards,
   getCharacter,
 } from "@/shared/Api/axios-hooks";
+import { GetStaticProps } from "next";
 import Image from "next/image";
-import s from "./MoveList.module.scss";
+import AsideBar from "@/Components/AsideBar/AsideBar";
+import { OutfitSection } from "@/Components/Outfits/Outfit-section";
+import CharacterCard from "@/Components/CharacterCard/CharacterCard";
+import Link from "next/link";
+import s from "../movelist/MoveList.module.scss";
 
 type NameProps = {
   data: CharactersTypes;
 };
+
 export const getStaticPaths = async () => {
   const data = await getCards();
   const paths = data.map((character) => ({
@@ -37,13 +38,38 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 };
 
-function CommandList({ data: combo }: NameProps) {
-  const backgr = {
-    backgroundImage: `url(/img/bg_${combo.name}.webp)`,
-    backgroundRepeat: "no-repeat",
+export default function Outfit({ data: characters }: NameProps) {
+  // const { slug } = useParams();
+  const [activeOut, setActiveOut] = useState(true);
+
+  // const { data: characters, refetch } = useQuery({
+  //   queryKey: ["character", { slug }],
+  //   queryFn: async () => GetCharacter(slug),
+  // });
+
+  // useEffect(() => {
+  //   refetch();
+  //   setActiveOut(true);
+  // }, [slug]);
+
+  const cardActive = () => {
+    setActiveOut(!activeOut);
   };
 
-  const CH = 3;
+  const backgr = {
+    backgroundImage: `url(/img/bg_${characters?.name}.webp)`,
+    backgroundRepeat: "no-repeat",
+  };
+  const CH = 4;
+
+  if (!characters) {
+    return (
+      <>
+        <div>lol</div>
+      </>
+    );
+  }
+
   return (
     <div>
       <main className={s.Main_Character}>
@@ -52,17 +78,22 @@ function CommandList({ data: combo }: NameProps) {
             <div
               className={clsx(
                 s.Main_img_CH,
-                combo.zoom && s[`Main_img_CH_Zoom_${combo.zoom}`],
+                characters?.zoom && s[`Main_img_CH_Zoom_${characters.zoom}`],
                 s.Main_img_CH
               )}
+              key={characters.name}
             >
               <span>
-                <Image src={`/img/${combo.name}.webp`} fill={true} alt='' />
+                <Image
+                  src={`/img/${characters.name}.webp`}
+                  fill={true}
+                  alt=''
+                />
               </span>
             </div>
             <section className={s.Second_section}>
               <h1>CHARACTERS</h1>
-              <h2 style={{ textTransform: "uppercase" }}>{combo.name}</h2>
+              <h2 style={{ textTransform: "uppercase" }}>{characters.name}</h2>
             </section>
             <div className={s.Right_Aside}>
               <AsideBar />
@@ -70,9 +101,7 @@ function CommandList({ data: combo }: NameProps) {
           </div>
         </article>
 
-        <section className={s.SectionCombo}>
-          <ComboListArea {...combo} />
-        </section>
+        <OutfitSection {...characters} click={cardActive} isTrue={activeOut} />
 
         <div className={s.Article_Two_Select}>
           <dl>
@@ -95,4 +124,3 @@ function CommandList({ data: combo }: NameProps) {
     </div>
   );
 }
-export default CommandList;
