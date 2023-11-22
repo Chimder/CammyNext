@@ -9,7 +9,7 @@ interface CombosProps extends Combo {
   left?: number;
   text?: string;
 }
-export const Combos = ({
+const Combos = ({
   arrows,
   comboName,
   img,
@@ -63,3 +63,4 @@ export const Combos = ({
     </li>
   );
 };
+export default Combos;

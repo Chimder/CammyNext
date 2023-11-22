@@ -3,7 +3,7 @@ import React from "react";
 import s from "./Footer.module.scss";
 import Image from "next/image";
 
-export function Footer() {
+export default function Footer() {
   return (
     <div className={s.footer}>
       <p>

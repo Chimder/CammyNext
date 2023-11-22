@@ -9,8 +9,8 @@ import {
   getCards,
   getCharacter,
 } from "@/shared/Api/axios-hooks";
-import { AsideBar } from "@/Components/AsideBar/AsideBar";
-import { CharacterCard } from "@/Components/CharacterCard/CharacterCard";
+import AsideBar from "@/Components/AsideBar/AsideBar";
+import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import { useParams, usePathname } from "next/navigation";
 import { GetStaticProps } from "next";
 type NameProps = {
@@ -48,14 +48,20 @@ function Character({ data: characters }: NameProps) {
     backgroundRepeat: "no-repeat",
   };
 
-  const mainIMG = characters?.main
-    ? `Main_img_CH_${characters.main}`
-    : "Main_img_CH";
+  console.log(characters?.main);
+  // const mainClass = characters?.main ? `${s.Main_img_CH}_${characters.main}` : s.Main_img_CH;
   return (
     <main className={s.Main_Character}>
       <article style={backgr}>
         <div className={s.Main_div}>
-          <div className={clsx(s.Main_img_CH, mainIMG)}>
+          <div
+            className={clsx(
+              s.Main_img_CH,
+              characters?.main && s[`Main_img_CH_${characters.main}`],
+              s.Main_img_CH
+            )}
+            key={characters?.name}
+          >
             <span>
               <Image src={`/img/${characters?.name}.webp`} fill={true} alt='' />
             </span>

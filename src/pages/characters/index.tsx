@@ -1,4 +1,4 @@
-import { CharacterCard } from "@/Components/CharacterCard/CharacterCard";
+import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import s from "./Characters.module.scss";
 import { useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/router";

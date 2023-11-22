@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import React from "react";
-import { AsideBar } from "@/Components/AsideBar/AsideBar";
-import { ComboListArea } from "@/Components/MoveList/ComboListArea";
-import { CharacterCard } from "@/Components/CharacterCard/CharacterCard";
+import  AsideBar  from "@/Components/AsideBar/AsideBar";
+import  ComboListArea  from "@/Components/MoveList/ComboListArea";
+import  CharacterCard  from "@/Components/CharacterCard/CharacterCard";
 import Link from "next/link";
 import { GetStaticProps } from "next";
 import {

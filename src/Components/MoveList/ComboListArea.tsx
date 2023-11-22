@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Combos } from "./Combos";
+import Combos from "./Combos";
 import { CharactersTypes } from "@/shared/Api/axios-hooks";
 import s from "./Combo.module.scss";
 
-export function ComboListArea(combo: CharactersTypes) {
+export default function ComboListArea(combo: CharactersTypes) {
   const [comboVid, setComboVid] = useState<string>();
   const [comboPod, setComboPod] = useState<string | undefined>();
 

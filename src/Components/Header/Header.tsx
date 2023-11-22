@@ -3,7 +3,7 @@ import s from "./header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-export function Header() {
+export default function Header() {
   const [headerSize, setHeaderSize] = useState(false);
   const changesize = () => {
     if (window.scrollY <= 140) {

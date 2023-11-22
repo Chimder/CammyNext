@@ -3,7 +3,7 @@ import s from "./AsideBar.module.scss";
 import { useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 
-export function AsideBar() {
+export default function AsideBar() {
   const param = useParams();
   const pathname = usePathname();
   const router = useRouter();

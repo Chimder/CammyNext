@@ -7,7 +7,7 @@ import { CharactersCards } from "@/shared/Data/CharactersCard";
 type Type = {
   CH: number;
 };
-export const CharacterCard = ({ CH }: Type) => {
+const CharacterCard = ({ CH }: Type) => {
   const pathname = usePathname();
 
   const [active, setActive] = React.useState<number | boolean>(false);
@@ -64,3 +64,4 @@ export const CharacterCard = ({ CH }: Type) => {
     </>
   );
 };
+export default CharacterCard;
