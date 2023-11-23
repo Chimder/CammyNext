@@ -1,4 +1,5 @@
 import axios from "axios";
+import prisma from "../lib/prisma";
 
 const URL = "https://calm-blue-caiman-slip.cyclic.app";
 
@@ -55,9 +56,15 @@ export const getCharacter = async (name: string): Promise<CharactersTypes> => {
   }
 };
 
+export const test = async () => {
+  const data = await prisma.post.findMany();
+  console.log(data, "in function");
+  return data;
+};
 export const getCards = async (): Promise<CharactersTypes[]> => {
   try {
     const { data } = await axiosFetch.get<CharactersTypes[]>("/cards");
+    console.log(data);
     return data;
   } catch (error) {
     console.error(error);

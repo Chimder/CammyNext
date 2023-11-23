@@ -1,0 +1,420 @@
+[
+  {
+    "name": "AKI",
+    "img": "/img/AKI.png",
+    "imgActive": "/img/AKIA.png",
+    "imgNotActive": "/img/AKIN.png",
+    "describe": "A poison-wielding apprentice of F.A.N.G, the former Shadaloo officer.Enchanted by the power of toxins, nothing brings her more joy than testing them on a new target—other than attention from her “master,” that is.",
+    "hates": "Nice weather, and anyone but her master",
+    "likes": "Snakes, rain, Master F.A.N.G",
+    "height": "5'8",
+    "weight": "126 lbs",
+    "img1": "/img/O_AKI_1.png",
+    "img2": "/img/O_AKI_2.png",
+    "out1": [
+      "/img/AKIF_01.jpg",
+      "/img/AKIF_02.jpg",
+      "/img/AKIF_03.jpg",
+      "/img/AKIF_04.jpg",
+      "/img/AKIF_05.jpg",
+      "/img/AKIF_06.jpg",
+      "/img/AKIF_07.jpg",
+      "/img/AKIF_08.jpg",
+      "/img/AKIF_09.jpg",
+      "/img/AKIF_10.jpg"
+    ],
+    "out2": [
+      "/img/AKIS_01.jpg",
+      "/img/AKIS_02.jpg",
+      "/img/AKIS_03.jpg",
+      "/img/AKIS_04.jpg",
+      "/img/AKIS_05.jpg",
+      "/img/AKIS_06.jpg",
+      "/img/AKIS_07.jpg",
+      "/img/AKIS_08.jpg",
+      "/img/AKIS_09.jpg",
+      "/img/AKIS_10.jpg"
+    ],
+    "video": [
+      {
+        "comboName": "Nightshade Pulse",
+        "video": "/img/V_AKI_1.mp4"
+      },
+      {
+        "comboName": "Nightshade Chaser",
+        "video": "/img/V_AKI_2.mp4"
+      },
+      {
+        "comboName": "Orchid Spring",
+        "video": "/img/V_AKI_3.mp4"
+      },
+      {
+        "comboName": "Toxic Wreath",
+        "video": "/img/V_AKI_4.mp4"
+      },
+      {
+        "comboName": "Serpent Lash",
+        "video": "/img/V_AKI_5.mp4"
+      },
+      {
+        "comboName": "Cruel Fate",
+        "video": "/img/V_AKI_6.mp4"
+      },
+      {
+        "comboName": "Snake Step",
+        "video": "/img/V_AKI_7.mp4"
+      },
+      {
+        "comboName": "Sinister Slide",
+        "video": "/img/V_AKI_8.mp4"
+      },
+      {
+        "comboName": "Venomous Fang",
+        "video": "/img/V_AKI_9.mp4"
+      },
+      {
+        "comboName": "Heel Strike",
+        "video": "/img/V_AKI_10.mp4"
+      },
+      {
+        "comboName": "Entrapment",
+        "video": "/img/V_AKI_11.mp4"
+      },
+      {
+        "comboName": "Deadly Implication",
+        "video": "/img/V_AKI_12.mp4"
+      },
+      {
+        "comboName": "Tainted Talons",
+        "video": "/img/V_AKI_13.mp4"
+      },
+      {
+        "comboName": "Claws of Ya Zi",
+        "video": "/img/V_AKI_14.mp4"
+      },
+      {
+        "comboName": "Pu Lao",
+        "video": "/img/V_AKI_15.mp4"
+      },
+      {
+        "comboName": "Chi Wen",
+        "video": "/img/V_AKI_16.mp4"
+      },
+      {
+        "comboName": "Qiu Niu",
+        "video": "/img/V_AKI_17.mp4"
+      },
+      {
+        "comboName": "Gong Fu",
+        "video": "/img/V_AKI_18.mp4"
+      },
+      {
+        "comboName": "Hun Dun",
+        "video": "/img/V_AKI_19.mp4"
+      },
+      {
+        "comboName": "Qiong Qi",
+        "video": "/img/V_AKI_20.mp4"
+      },
+      {
+        "comboName": "Whisper",
+        "video": "/img/V_AKI_21.mp4"
+      },
+      {
+        "comboName": "Gluttony",
+        "video": "/img/V_AKI_22.mp4"
+      },
+      {
+        "comboName": "Drive Impact: Zao Chi",
+        "video": "/img/V_AKI_23.mp4"
+      },
+      {
+        "comboName": "Drive Reversal: Feng Shi",
+        "video": "/img/V_AKI_24.mp4"
+      },
+      {
+        "comboName": "Drive Parry",
+        "video": "/img/V_AKI_25.mp4"
+      },
+      {
+        "comboName": "Parry Drive Rush",
+        "video": "/img/V_AKI_26.mp4"
+      },
+      {
+        "comboName": "Cancel Drive Rush",
+        "video": "/img/V_AKI_27.mp4"
+      }
+    ],
+    "special": [
+      {
+        "comboName": "Nightshade Pulse",
+        "img": "/img/C_AKI_1.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/D.png",
+          "/img/Dl.png",
+          "/img/L.png",
+          "/img/Plus.png",
+          "/img/Punch.png"
+        ]
+      },
+      {
+        "comboName": "Nightshade Chaser",
+        "img": "/img/C_AKI_2.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/R.png",
+          "/img/D.png",
+          "/img/Dr.png",
+          "/img/Plus.png",
+          "/img/Punch.png"
+        ]
+      },
+      {
+        "comboName": "Orchid Spring",
+        "img": "/img/C_AKI_3.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/D.png",
+          "/img/Dl.png",
+          "/img/L.png",
+          "/img/Plus.png",
+          "/img/Punch.png"
+        ]
+      },
+      {
+        "comboName": "Toxic Wreath",
+        "img": "/img/C_AKI_4.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/D.png",
+          "/img/Dl.png",
+          "/img/L.png",
+          "/img/Plus.png",
+          "/img/Kick.png"
+        ]
+      },
+      {
+        "comboName": "Serpent Lash",
+        "img": "/img/C_AKI_5.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/D.png",
+          "/img/Dr.png",
+          "/img/R.png",
+          "/img/Plus.png",
+          "/img/Punch.png"
+        ]
+      },
+      {
+        "comboName": "Cruel Fate",
+        "left": 1,
+        "img": "/img/C_AKI_6.jpg",
+        "arrows": ["/img/Punch.png"]
+      },
+      {
+        "comboName": "Snake Step",
+        "left": 1,
+        "img": "/img/C_AKI_7.jpg",
+        "arrows": ["/img/Kick.png"]
+      },
+      {
+        "comboName": "Sinister Slide",
+        "left": 1,
+        "img": "/img/C_AKI_8.jpg",
+        "arrows": ["/img/D.png", "/img/Plus.png", "/img/Kick.png"]
+      },
+      {
+        "comboName": "Venomous Fang",
+        "left": 1,
+        "img": "/img/C_AKI_9.jpg",
+        "arrows": [
+          "/img/Punch.png",
+          "/img/L.png",
+          "/img/Kick.png",
+          "/img/L.png"
+        ]
+      },
+      {
+        "comboName": "Heel Strike",
+        "left": 2,
+        "img": "/img/C_AKI_10.jpg",
+        "arrows": ["/img/Punch.png"]
+      },
+      {
+        "comboName": "Entrapment",
+        "img": "/img/C_AKI_11.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/D.png",
+          "/img/Dr.png",
+          "/img/R.png",
+          "/img/D.png",
+          "/img/Dr.png",
+          "/img/R.png",
+          "/img/Plus.png",
+          "/img/Kick.png"
+        ]
+      }
+    ],
+    "superMove": [
+      {
+        "comboName": "Deadly Implication",
+        "img": "/img/C_AKI_12.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/D.png",
+          "/img/Dl.png",
+          "/img/L.png",
+          "/img/D.png",
+          "/img/Dl.png",
+          "/img/L.png",
+          "/img/Plus.png",
+          "/img/Kick.png"
+        ]
+      },
+      {
+        "comboName": "Tainted Talons",
+        "img": "/img/C_AKI_13.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/D.png",
+          "/img/Dl.png",
+          "/img/L.png",
+          "/img/D.png",
+          "/img/Dl.png",
+          "/img/L.png",
+          "/img/Plus.png",
+          "/img/Kick.png"
+        ]
+      },
+      {
+        "comboName": "Claws of Ya Zi",
+        "img": "/img/C_AKI_14.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/D.png",
+          "/img/Dr.png",
+          "/img/R.png",
+          "/img/D.png",
+          "/img/Dr.png",
+          "/img/R.png",
+          "/img/Plus.png",
+          "/img/Punch.png"
+        ]
+      }
+    ],
+    "unique": [
+      {
+        "comboName": "Pu Lao",
+        "img": "/img/C_AKI_15.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": ["/img/L.png", "/img/Plus.png", "/img/Punch.png"]
+      },
+      {
+        "comboName": "Chi Wen",
+        "img": "/img/C_AKI_16.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": ["/img/R.png", "/img/Plus.png", "/img/Kick.png"]
+      },
+      {
+        "comboName": "Qiu Niu",
+        "img": "/img/C_AKI_17.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": ["/img/R.png", "/img/Plus.png", "/img/Kick.png"]
+      },
+      {
+        "comboName": "Gong Fu",
+        "img": "/img/C_AKI_18.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/L.png",
+          "/img/Plus.png",
+          "/img/Punch.png",
+          "/img/Plus.png",
+          "/img/Kick.png"
+        ]
+      },
+      {
+        "comboName": "Hun Dun",
+        "img": "/img/C_AKI_19.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": ["/img/Punch.png", "/img/Plus.png", "/img/Kick.png"]
+      },
+      {
+        "comboName": "Qiong Qi",
+        "img": "/img/C_AKI_20.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/R.png",
+          "/img/Plus.png",
+          "/img/Punch.png",
+          "/img/Kick.png"
+        ]
+      }
+    ],
+    "throws": [
+      {
+        "comboName": "Whisper",
+        "img": "/img/C_AKI_21.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/L.png",
+          "/img/Punch.png",
+          "/img/Plus.png",
+          "/img/Kick.png"
+        ]
+      },
+      {
+        "comboName": "Gluttony",
+        "img": "/img/C_AKI_22.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": ["/img/Punch.png", "/img/Plus.png", "/img/Kick.png"]
+      }
+    ],
+    "common": [
+      {
+        "comboName": "Drive Impact: Zao Chi",
+        "img": "/img/C_AKI_23.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": ["/img/Punch.png", "/img/Plus.png", "/img/Kick.png"]
+      },
+      {
+        "comboName": "Drive Reversal: Feng Shi",
+        "img": "/img/C_AKI_24.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/R.png",
+          "/img/Punch.png",
+          "/img/Plus.png",
+          "/img/Kick.png"
+        ]
+      },
+      {
+        "comboName": "Drive Parry",
+        "img": "/img/C_AKI_25.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": ["/img/Punch.png", "/img/Plus.png", "/img/Kick.png"]
+      },
+      {
+        "comboName": "Parry Drive Rush",
+        "left": 2,
+        "img": "/img/C_AKI_26.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": ["/img/R.png", "/img/R.png"]
+      },
+      {
+        "comboName": "Cancel Drive Rush",
+        "img": "/img/C_AKI_27.jpg",
+        "energy": "/img/E_2.png",
+        "arrows": [
+          "/img/R.png",
+          "/img/R.png",
+          "/img/Plus.png",
+          "/img/Punch.png",
+          "/img/Kick.png"
+        ]
+      }
+    ]
+  }
+]
