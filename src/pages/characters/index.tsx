@@ -2,15 +2,28 @@ import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import s from "./Characters.module.scss";
 import { useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 function Characters() {
   const pathname = usePathname();
   const param = useParams();
   const navigation = useRouter();
+  const [characters, setCharacters] = useState();
 
-  console.log(pathname, "pathname");
-  console.log(param, "param");
-  console.log(navigation, "navigation");
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/post");
+        const data = await response.json();
+        setCharacters(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  console.log(characters);
   const CH = 1;
   return (
     <main className={s.contents}>

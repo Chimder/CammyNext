@@ -55,6 +55,7 @@ function CommandList({ data: combo }: NameProps) {
                 combo.zoom && s[`Main_img_CH_Zoom_${combo.zoom}`],
                 s.Main_img_CH
               )}
+              key={combo.name}
             >
               <span>
                 <Image src={`/img/${combo.name}.webp`} fill={true} alt='' />

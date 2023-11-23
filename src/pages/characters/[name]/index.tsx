@@ -48,7 +48,7 @@ function Character({ data: characters }: NameProps) {
     backgroundRepeat: "no-repeat",
   };
 
-  console.log(characters?.main);
+  console.log(characters);
   // const mainClass = characters?.main ? `${s.Main_img_CH}_${characters.main}` : s.Main_img_CH;
   return (
     <main className={s.Main_Character}>

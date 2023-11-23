@@ -1,0 +1,92 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  name String @unique
+}
+
+model Character {
+  id           Int       @id @default(autoincrement())
+  name         String    @unique
+  zoom         Int?
+  main         Int?
+  img          String?
+  imgActive    String?
+  imgNotActive String?
+  describe     String?
+  hates        String?
+  likes        String?
+  height       String?
+  weight       String?
+  img1         String?
+  img2         String?
+  out1         String[]
+  out2         String[]
+  video        Video[]
+  special      Special[]
+  super        Super[]
+  unique       Unique[]
+  throws       Throws[]
+  common       Common[]
+}
+
+model Video {
+  comboName     String?    @unique
+  video         String     @unique
+  Character     Character? @relation(fields: [characterName], references: [name])
+  characterName String?
+}
+
+model Special {
+  comboName     String     @unique
+  img           String?
+  energy        String?
+  arrows        String[]
+  Character     Character? @relation(fields: [characterName], references: [name])
+  characterName String?
+}
+
+model Super {
+  comboName     String     @unique
+  img           String?
+  energy        String?
+  arrows        String[]
+  Character     Character? @relation(fields: [characterName], references: [name])
+  characterName String?
+}
+
+model Unique {
+  comboName     String     @unique
+  img           String?
+  energy        String?
+  arrows        String[]
+  Character     Character? @relation(fields: [characterName], references: [name])
+  characterName String?
+}
+
+model Throws {
+  comboName     String     @unique
+  img           String?
+  energy        String?
+  arrows        String[]
+  Character     Character? @relation(fields: [characterName], references: [name])
+  characterName String?
+}
+
+model Common {
+  comboName     String     @unique
+  img           String?
+  energy        String?
+  arrows        String[]
+  Character     Character? @relation(fields: [characterName], references: [name])
+  characterName String?
+}
