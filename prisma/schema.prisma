@@ -10,10 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  name String @unique
-}
-
 model Character {
   id           Int       @id @default(autoincrement())
   name         String    @unique
@@ -33,7 +29,7 @@ model Character {
   out2         String[]
   video        Video[]
   special      Special[]
-  super        Super[]
+  supel        Supel[]
   unique       Unique[]
   throws       Throws[]
   common       Common[]
@@ -43,7 +39,7 @@ model Video {
   comboName     String?    @unique
   video         String     @unique
   Character     Character? @relation(fields: [characterName], references: [name])
-  characterName String?
+  characterName String
 }
 
 model Special {
@@ -51,15 +47,17 @@ model Special {
   img           String?
   energy        String?
   arrows        String[]
+  left          Int?
   Character     Character? @relation(fields: [characterName], references: [name])
   characterName String?
 }
 
-model Super {
+model Supel {
   comboName     String     @unique
   img           String?
   energy        String?
   arrows        String[]
+  left          Int?
   Character     Character? @relation(fields: [characterName], references: [name])
   characterName String?
 }
@@ -69,6 +67,7 @@ model Unique {
   img           String?
   energy        String?
   arrows        String[]
+  left          Int?
   Character     Character? @relation(fields: [characterName], references: [name])
   characterName String?
 }
@@ -78,6 +77,7 @@ model Throws {
   img           String?
   energy        String?
   arrows        String[]
+  left          Int?
   Character     Character? @relation(fields: [characterName], references: [name])
   characterName String?
 }
@@ -86,6 +86,7 @@ model Common {
   comboName     String     @unique
   img           String?
   energy        String?
+  left          Int?
   arrows        String[]
   Character     Character? @relation(fields: [characterName], references: [name])
   characterName String?

@@ -10,7 +10,15 @@ export default async function handler(
   }
 
   try {
-    const character = await prisma.character.findMany();
+    const character = await prisma.character.findUnique({
+      where: {
+        name: "AKI",
+      },
+      include: {
+        special: true,
+
+      },
+    });
 
     console.log(character);
     res.status(200).json(character);

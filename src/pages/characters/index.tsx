@@ -3,6 +3,7 @@ import s from "./Characters.module.scss";
 import { useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { data } from "@/shared/xx/2";
 
 function Characters() {
   const pathname = usePathname();
@@ -23,8 +24,9 @@ function Characters() {
 
     fetchData();
   }, []);
-  console.log(characters);
   const CH = 1;
+
+  console.log(data[0].supel);
   return (
     <main className={s.contents}>
       <div className={s.contents_into}>
