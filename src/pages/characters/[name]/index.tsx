@@ -58,7 +58,6 @@ function Character({ data: characters }: NameProps) {
     backgroundRepeat: "no-repeat",
   };
 
-  console.log("(*&&^&", characters);
 
   return (
     <main className={s.Main_Character}>

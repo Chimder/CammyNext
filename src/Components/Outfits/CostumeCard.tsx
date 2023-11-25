@@ -19,7 +19,7 @@ export function CostumeCards({ click, img1, img2, isTrue }: CostumeCardPorps) {
       >
         <div className={s.Outfit_type_inner_card}>
           <span>
-            <Image src={img1} fill={true} alt='' />
+            <Image key={img1} src={img1} fill={true} alt='' />
           </span>
         </div>
         <p>Outfit1</p>
@@ -34,7 +34,7 @@ export function CostumeCards({ click, img1, img2, isTrue }: CostumeCardPorps) {
       >
         <div className={s.Outfit_type_inner_card}>
           <span>
-            <Image src={img2} fill={true} alt='' />
+            <Image key={img2} src={img2} fill={true} alt='' />
           </span>
         </div>
         <p>Outfit2</p>

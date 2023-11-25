@@ -24,7 +24,6 @@ export default async function handler(
       // }
       ();
 
-    console.log(character);
     res.status(200).json(character);
   } catch (error) {
     console.error(error);

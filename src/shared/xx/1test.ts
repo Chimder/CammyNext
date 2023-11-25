@@ -16,7 +16,6 @@ export async function addAttacksToDatabase(
       }>
     | any;
 
-  console.log(data[0], "==========================================");
   if (type === "special") {
     attacks = data[0].special;
   } else if (type === "common") {
