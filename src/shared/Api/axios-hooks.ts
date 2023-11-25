@@ -1,7 +1,6 @@
 import axios from "axios";
-import prisma from "../lib/prisma";
 
-const URL = "https://calm-blue-caiman-slip.cyclic.app";
+const URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const axiosFetch = axios.create({
   baseURL: URL,
@@ -72,9 +71,7 @@ export const getCards = async (): Promise<CharactersTypes[]> => {
 
 export const getCharacter = async (name: string): Promise<CharactersTypes> => {
   try {
-    const { data } = await axios.get(
-      `http://localhost:3000/api/character/${name}`
-    );
+    const { data } = await axiosFetch.get(`/api/character/${name}`);
     return data;
   } catch (error) {
     console.error(error);

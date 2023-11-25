@@ -8,7 +8,7 @@ import { OutfitSection } from "@/Components/Outfits/Outfit-section";
 import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import Link from "next/link";
 import s from "../movelist/MoveList.module.scss";
-import { prisma } from "@/shared/lib/prisma";
+import prisma from "@/shared/lib/prisma";
 
 type NameProps = {
   data: CharactersTypes;

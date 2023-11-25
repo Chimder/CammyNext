@@ -1,6 +1,6 @@
 import { CharactersTypes, getCharacter } from "@/shared/Api/axios-hooks";
 import s from "./MoveList.module.scss";
-import { prisma } from "@/shared/lib/prisma";
+import prisma from "@/shared/lib/prisma";
 import { GetStaticProps } from "next";
 import clsx from "clsx";
 import AsideBar from "@/Components/AsideBar/AsideBar";
