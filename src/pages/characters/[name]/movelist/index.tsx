@@ -26,6 +26,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     // const data = await getCharacter(params?.name as string);
+    
     const data = await prisma.character.findUnique({
       where: {
         name: params?.name as string,
