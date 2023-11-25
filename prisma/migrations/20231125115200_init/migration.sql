@@ -1,6 +1,5 @@
 -- CreateTable
 CREATE TABLE "Character" (
-    "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "zoom" INTEGER,
     "main" INTEGER,
@@ -15,9 +14,7 @@ CREATE TABLE "Character" (
     "img1" TEXT,
     "img2" TEXT,
     "out1" TEXT[],
-    "out2" TEXT[],
-
-    CONSTRAINT "Character_pkey" PRIMARY KEY ("id")
+    "out2" TEXT[]
 );
 
 -- CreateTable

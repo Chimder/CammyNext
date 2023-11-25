@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import s from "./Character.module.scss";
 import Image from "next/image";
@@ -13,6 +13,7 @@ import AsideBar from "@/Components/AsideBar/AsideBar";
 import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import { useParams, usePathname } from "next/navigation";
 import { GetStaticProps } from "next";
+import axios from "axios";
 type NameProps = {
   data: CharactersTypes;
 };
@@ -38,9 +39,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 };
 
-function Character({ data: characters }: NameProps) {
+function Character() {
   const pathname = usePathname();
   const param = useParams();
+  const [characters, setCharacter] = useState<any>();
+  const fetchData = async () => {
+    const data = await axios.get("http://localhost:3000/api/findOne");
+    console.log(data.data, "=====");
+    setCharacter(data.data);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const CH = 2;
   const backgr = {
@@ -48,7 +58,12 @@ function Character({ data: characters }: NameProps) {
     backgroundRepeat: "no-repeat",
   };
 
-  console.log(characters);
+  // const name = usePathname();
+  const name = useParams();
+
+  if (!characters) {
+    return <div>Loading</div>;
+  }
   // const mainClass = characters?.main ? `${s.Main_img_CH}_${characters.main}` : s.Main_img_CH;
   return (
     <main className={s.Main_Character}>

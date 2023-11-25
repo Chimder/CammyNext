@@ -33,7 +33,7 @@ export type CharactersTypes = {
   out1: string[];
   out2: string[];
   special: Combo[];
-  super: Combo[];
+  supel: Combo[];
   throws: Combo[];
   common: Combo[];
   unique: Combo[];
@@ -69,5 +69,30 @@ export const getCards = async (): Promise<CharactersTypes[]> => {
   } catch (error) {
     console.error(error);
     return [];
+  }
+};
+
+export const getCardstest = async (): Promise<CharactersTypes[]> => {
+  try {
+    const { data } = await axiosFetch.get<any>("api/findAll");
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
+
+export const getCharactertest = async (
+  name: string
+): Promise<CharactersTypes> => {
+  try {
+    const { data } = await axiosFetch.get<CharactersTypes>(
+      `api/findOne/${name}`
+    );
+    return data;
+  } catch (error) {
+    console.error(error);
+    throw new Error("Failed to fetch character");
   }
 };

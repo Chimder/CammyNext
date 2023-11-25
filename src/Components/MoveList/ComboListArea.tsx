@@ -7,10 +7,10 @@ export default function ComboListArea(combo: CharactersTypes) {
   const [comboVid, setComboVid] = useState<string>();
   const [comboPod, setComboPod] = useState<string | undefined>();
 
-  useEffect(() => {
-    setComboPod(combo?.video[0].comboName);
-    setComboVid(combo?.video[0].video);
-  }, [combo]);
+  // useEffect(() => {
+  //   setComboPod(combo?.video[0]?.comboName);
+  //   setComboVid(combo?.video[0]?.video);
+  // }, [combo]);
 
   const handleClick = (data: React.MouseEvent<HTMLLIElement>) => {
     const target = data.target as HTMLElement;
@@ -55,7 +55,7 @@ export default function ComboListArea(combo: CharactersTypes) {
       <div className={s.moveList_area}>
         <h4 className={s.moveList_h}>Special Moves</h4>
         <ul className={s.moveList_ul}>
-          {combo.special.map((data, index) => {
+          {combo?.special?.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -69,7 +69,7 @@ export default function ComboListArea(combo: CharactersTypes) {
 
         <h4 className={s.moveList_h}>Super Arts</h4>
         <ul className={s.moveList_ul}>
-          {combo.super.map((data, index) => {
+          {combo?.supel?.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -83,7 +83,7 @@ export default function ComboListArea(combo: CharactersTypes) {
 
         <h4 className={s.moveList_h}>Unique Attacks</h4>
         <ul className={s.moveList_ul}>
-          {combo.unique.map((data, index) => {
+          {combo?.unique?.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -96,7 +96,7 @@ export default function ComboListArea(combo: CharactersTypes) {
         </ul>
         <h4 className={s.moveList_h}>Throws</h4>
         <ul className={s.moveList_ul}>
-          {combo.throws.map((data, index) => {
+          {combo?.throws?.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -109,7 +109,7 @@ export default function ComboListArea(combo: CharactersTypes) {
         </ul>
         <h4 className={s.moveList_h}>Common Moves</h4>
         <ul className={s.moveList_ul}>
-          {combo.common.map((data, index) => {
+          {/* {combo.common.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -118,7 +118,7 @@ export default function ComboListArea(combo: CharactersTypes) {
                 click={handleClick}
               />
             );
-          })}
+          })} */}
         </ul>
       </div>
       <div

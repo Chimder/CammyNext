@@ -1,19 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { addAttacksToDatabase } from "@/shared/xx/1test";
+import { addCharacterToDatabase } from "@/shared/xx/1character";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   try {
-    // Ваш JSON-объект с данными персонажа и специальными атаками
-
-    await addAttacksToDatabase("character");
-    await addAttacksToDatabase("special");
-    await addAttacksToDatabase("common");
-    await addAttacksToDatabase("supel");
-    await addAttacksToDatabase("throws");
-    await addAttacksToDatabase("unique");
+    await addCharacterToDatabase();
 
     res
       .status(200)
