@@ -1,6 +1,5 @@
 import clsx from "clsx";
-import React, { useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
+import React from "react";
 import s from "./Character.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +8,7 @@ import AsideBar from "@/Components/AsideBar/AsideBar";
 import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import { useParams, usePathname } from "next/navigation";
 import { GetStaticProps } from "next";
-import { prisma } from "@/shared/lib/prisma";
+import prisma from "@/shared/lib/prisma";
 type NameProps = {
   data: CharactersTypes;
 };
