@@ -10,6 +10,7 @@ const axiosFetch = axios.create({
 export type Combo = {
   arrows: string[];
   comboName: string;
+  characterName?: string;
   energy: string;
   img: string;
   _id?: string;
@@ -39,12 +40,14 @@ export type CharactersTypes = {
   unique: Combo[];
   video: Video[];
   weight: string;
-  zoom: number;
-  main: number;
+  zoom?: number;
+  main?: number;
   _id?: string;
 };
 
-export const getCharacter = async (name: string): Promise<CharactersTypes> => {
+export const getCharacterFirstEdit = async (
+  name: string
+): Promise<CharactersTypes> => {
   try {
     const { data } = await axiosFetch.get<CharactersTypes>(
       `/characters/${name}`
@@ -56,11 +59,6 @@ export const getCharacter = async (name: string): Promise<CharactersTypes> => {
   }
 };
 
-export const test = async () => {
-  const data = await prisma.post.findMany();
-  console.log(data, "in function");
-  return data;
-};
 export const getCards = async (): Promise<CharactersTypes[]> => {
   try {
     const { data } = await axiosFetch.get<CharactersTypes[]>("/cards");
@@ -72,23 +70,10 @@ export const getCards = async (): Promise<CharactersTypes[]> => {
   }
 };
 
-export const getCardstest = async (): Promise<CharactersTypes[]> => {
+export const getCharacter = async (name: string): Promise<CharactersTypes> => {
   try {
-    const { data } = await axiosFetch.get<any>("api/findAll");
-    console.log(data);
-    return data;
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
-};
-
-export const getCharactertest = async (
-  name: string
-): Promise<CharactersTypes> => {
-  try {
-    const { data } = await axiosFetch.get<CharactersTypes>(
-      `api/findOne/${name}`
+    const { data } = await axios.get(
+      `http://localhost:3000/api/character/${name}`
     );
     return data;
   } catch (error) {

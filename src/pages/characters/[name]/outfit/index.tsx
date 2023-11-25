@@ -1,10 +1,6 @@
 import clsx from "clsx";
 import { useState } from "react";
-import {
-  CharactersTypes,
-  getCards,
-  getCharacter,
-} from "@/shared/Api/axios-hooks";
+import { CharactersTypes, getCharacter } from "@/shared/Api/axios-hooks";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import AsideBar from "@/Components/AsideBar/AsideBar";
@@ -12,13 +8,14 @@ import { OutfitSection } from "@/Components/Outfits/Outfit-section";
 import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import Link from "next/link";
 import s from "../movelist/MoveList.module.scss";
+import { prisma } from "@/shared/lib/prisma";
 
 type NameProps = {
   data: CharactersTypes;
 };
 
 export const getStaticPaths = async () => {
-  const data = await getCards();
+  const data = await prisma.character.findMany();
   const paths = data.map((character) => ({
     params: { name: character.name },
   }));
@@ -39,18 +36,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export default function Outfit({ data: characters }: NameProps) {
-  // const { slug } = useParams();
   const [activeOut, setActiveOut] = useState(true);
-
-  // const { data: characters, refetch } = useQuery({
-  //   queryKey: ["character", { slug }],
-  //   queryFn: async () => GetCharacter(slug),
-  // });
-
-  // useEffect(() => {
-  //   refetch();
-  //   setActiveOut(true);
-  // }, [slug]);
 
   const cardActive = () => {
     setActiveOut(!activeOut);
@@ -69,7 +55,7 @@ export default function Outfit({ data: characters }: NameProps) {
       </>
     );
   }
-
+  console.log(characters?.zoom);
   return (
     <div>
       <main className={s.Main_Character}>
@@ -78,7 +64,7 @@ export default function Outfit({ data: characters }: NameProps) {
             <div
               className={clsx(
                 s.Main_img_CH,
-                characters?.zoom && s[`Main_img_CH_Zoom_${characters.zoom}`],
+                characters.zoom && s[`Main_img_CH_Zoom_${characters.zoom}`],
                 s.Main_img_CH
               )}
               key={characters.name}

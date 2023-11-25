@@ -1,24 +1,19 @@
+import { CharactersTypes, getCharacter } from "@/shared/Api/axios-hooks";
+import s from "./MoveList.module.scss";
+import { prisma } from "@/shared/lib/prisma";
+import { GetStaticProps } from "next";
 import clsx from "clsx";
-import React, { useEffect, useState } from "react";
 import AsideBar from "@/Components/AsideBar/AsideBar";
-import ComboListArea from "@/Components/MoveList/ComboListArea";
+import { ComboListArea } from "@/Components/MoveList/ComboListArea";
 import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import Link from "next/link";
-import { GetStaticProps } from "next";
-import {
-  CharactersTypes,
-  getCards,
-  getCharacter,
-} from "@/shared/Api/axios-hooks";
-import Image from "next/image";
-import s from "./MoveList.module.scss";
-import axios from "axios";
 
 type NameProps = {
   data: CharactersTypes;
 };
+
 export const getStaticPaths = async () => {
-  const data = await getCards();
+  const data = await prisma.character.findMany();
   const paths = data.map((character) => ({
     params: { name: character.name },
   }));
@@ -38,24 +33,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 };
 
-function CommandList() {
-  const [combo, setCharacter] = useState<any>();
-  const fetchData = async () => {
-    const data = await axios.get("http://localhost:3000/api/findOne");
-    console.log(data, "=====");
-    setCharacter(data.data);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
-
+function CommandList({ data: combo }: NameProps) {
   const backgr = {
     backgroundImage: `url(/img/bg_${combo?.name}.webp)`,
     backgroundRepeat: "no-repeat",
   };
-  if (!combo) {
-    return <div>Loading</div>;
-  }
+  console.log("CCOMBO", combo);
   const CH = 3;
   return (
     <div>
@@ -71,7 +54,7 @@ function CommandList() {
               key={combo?.name}
             >
               <span>
-                <Image src={`/img/${combo?.name}.webp`} fill={true} alt='' />
+                <img src={`/img/${combo?.name}.webp`} alt='' />
               </span>
             </div>
             <section className={s.Second_section}>

@@ -1,8 +1,6 @@
-import clsx from "clsx";
-import React from "react";
-import s from "./Combo.module.scss";
 import { Combo } from "@/shared/Api/axios-hooks";
-import Image from "next/image";
+import s from "./Combo.module.scss";
+import clsx from "clsx";
 interface CombosProps extends Combo {
   podsvet?: string;
   click: (data: React.MouseEvent<HTMLLIElement>) => void;
@@ -39,7 +37,7 @@ const Combos = ({
       <div className={s.moveList_li_div}>
         <span>
           <span>
-            <Image src={img} fill={true} alt='' />
+            <img src={img} alt='' />
           </span>
         </span>
       </div>
@@ -49,16 +47,19 @@ const Combos = ({
           {!arrows ? (
             <div className={s.comboArrow_arts}>{text}</div>
           ) : (
-            arrows.map((arr, index) => (
-              <Image src={arr} key={index} fill={true} alt='' />
-            ))
+            arrows.map((arr, index) => <img src={arr} key={index} alt='' />)
           )}
         </span>
       </div>
       <div className={clsx(s.moveList_drive, s.moveList_drive_test)}>
-        <span>
+        {/* <span>
           <Image src={energy} alt='' fill={true} />
-        </span>
+        </span> */}
+        {energy !== null && (
+          <span>
+            <img src={energy} alt='' />
+          </span>
+        )}
       </div>
     </li>
   );
