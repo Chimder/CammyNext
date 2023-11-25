@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Character {
-  id           Int       @id @default(autoincrement())
+  // id           Int       @id @default(autoincrement())
   name         String    @unique
   zoom         Int?
   main         Int?
@@ -36,15 +36,15 @@ model Character {
 }
 
 model Video {
-  comboName     String?    @unique
+  comboName     String?
   video         String     @unique
   Character     Character? @relation(fields: [characterName], references: [name])
-  characterName String
+  characterName String?
 }
 
 model Special {
-  comboName     String     @unique
-  img           String?
+  comboName     String
+  img           String     @unique
   energy        String?
   arrows        String[]
   left          Int?
@@ -53,8 +53,8 @@ model Special {
 }
 
 model Supel {
-  comboName     String     @unique
-  img           String?
+  comboName     String
+  img           String     @unique
   energy        String?
   arrows        String[]
   left          Int?
@@ -63,8 +63,8 @@ model Supel {
 }
 
 model Unique {
-  comboName     String     @unique
-  img           String?
+  comboName     String
+  img           String     @unique
   energy        String?
   arrows        String[]
   left          Int?
@@ -73,8 +73,8 @@ model Unique {
 }
 
 model Throws {
-  comboName     String     @unique
-  img           String?
+  comboName     String
+  img           String     @unique
   energy        String?
   arrows        String[]
   left          Int?
@@ -83,8 +83,8 @@ model Throws {
 }
 
 model Common {
-  comboName     String     @unique
-  img           String?
+  comboName     String
+  img           String     @unique
   energy        String?
   left          Int?
   arrows        String[]

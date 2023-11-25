@@ -1,6 +1,5 @@
-import { PrismaClient } from "@prisma/client";
 import { prisma } from "../lib/prisma";
-import { data } from "./2";
+import { data } from "./zangief";
 
 export async function addAttacksToDatabase(
   // characterData: any,
@@ -38,7 +37,6 @@ export async function addAttacksToDatabase(
     if (attacks) {
       for (const attackData of attacks) {
         if (type === "character") {
-          // Создание записи в таблице Character
           await prisma.character.create({
             data: {
               name: attackData.name,
