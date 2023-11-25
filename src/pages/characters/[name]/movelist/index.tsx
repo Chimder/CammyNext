@@ -26,7 +26,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     // const data = await getCharacter(params?.name as string);
-    
+
     const data = await prisma.character.findUnique({
       where: {
         name: params?.name as string,
@@ -52,7 +52,6 @@ function CommandList({ data: combo }: NameProps) {
     backgroundImage: `url(/img/bg_${combo?.name}.webp)`,
     backgroundRepeat: "no-repeat",
   };
-  console.log("CCOMBO", combo);
   const CH = 3;
   return (
     <div>

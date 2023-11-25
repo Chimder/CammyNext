@@ -61,7 +61,6 @@ export const getCharacterFirstEdit = async (
 export const getCards = async (): Promise<CharactersTypes[]> => {
   try {
     const { data } = await axiosFetch.get<CharactersTypes[]>("/cards");
-    console.log(data);
     return data;
   } catch (error) {
     console.error(error);

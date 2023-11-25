@@ -70,7 +70,7 @@ export function OutfitSection({
               <ul className={style.Outfit_List_wrapper}>
                 {isTrue === true
                   ? out1.map((card, index) => (
-                      <li key={index} className={style.Outfit_List_wrapper_li}>
+                      <li key={card} className={style.Outfit_List_wrapper_li}>
                         <p>01</p>
                         <div>
                           <span>
@@ -80,7 +80,7 @@ export function OutfitSection({
                       </li>
                     ))
                   : out2.map((card, index) => (
-                      <li key={index} className={style.Outfit_List_wrapper_li}>
+                      <li key={card} className={style.Outfit_List_wrapper_li}>
                         <p>01</p>
                         <div>
                           <span>

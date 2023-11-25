@@ -68,7 +68,6 @@ export default function Outfit({ data: characters }: NameProps) {
       </>
     );
   }
-  console.log(characters?.zoom);
   return (
     <div>
       <main className={s.Main_Character}>

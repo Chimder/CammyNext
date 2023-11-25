@@ -7,7 +7,6 @@ export default function AsideBar() {
   const param = useParams();
   const pathname = usePathname();
   const router = useRouter();
-  // console.log(router.query.name);
 
   return (
     <aside className={s.Aside_into}>
