@@ -9,13 +9,12 @@ export default async function handler(
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  const { name } = req.query; // изменение этой строки
+  const { name } = req.query;
 
-  console.log(name, "name");
   try {
     const character = await prisma.character.findUnique({
       where: {
-        name: "Zangief" as string, // добавление as string, если name ожидается строкой
+        name: name as string,
       },
       include: {
         video: true,
@@ -27,7 +26,10 @@ export default async function handler(
       },
     });
 
-    console.log(character);
+    if (!character) {
+      return res.status(404).json({ error: "Character not found" });
+    }
+
     res.status(200).json(character);
   } catch (error) {
     console.error(error);

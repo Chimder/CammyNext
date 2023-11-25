@@ -1,25 +1,21 @@
 import clsx from "clsx";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import s from "./Character.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  CharactersTypes,
-  getCards,
-  getCharacter,
-} from "@/shared/Api/axios-hooks";
+import { CharactersTypes, getCharacter } from "@/shared/Api/axios-hooks";
 import AsideBar from "@/Components/AsideBar/AsideBar";
 import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import { useParams, usePathname } from "next/navigation";
 import { GetStaticProps } from "next";
-import axios from "axios";
+import { prisma } from "@/shared/lib/prisma";
 type NameProps = {
   data: CharactersTypes;
 };
 
 export const getStaticPaths = async () => {
-  const data = await getCards();
+  const data = await prisma.character.findMany();
   const paths = data.map((character) => ({
     params: { name: character.name },
   }));
@@ -39,18 +35,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 };
 
-function Character() {
+function Character({ data: characters }: NameProps) {
   const pathname = usePathname();
   const param = useParams();
-  const [characters, setCharacter] = useState<any>();
-  const fetchData = async () => {
-    const data = await axios.get("http://localhost:3000/api/findOne");
-    console.log(data.data, "=====");
-    setCharacter(data.data);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   const CH = 2;
   const backgr = {
@@ -58,13 +45,8 @@ function Character() {
     backgroundRepeat: "no-repeat",
   };
 
-  // const name = usePathname();
-  const name = useParams();
+  console.log("(*&&^&", characters);
 
-  if (!characters) {
-    return <div>Loading</div>;
-  }
-  // const mainClass = characters?.main ? `${s.Main_img_CH}_${characters.main}` : s.Main_img_CH;
   return (
     <main className={s.Main_Character}>
       <article style={backgr}>

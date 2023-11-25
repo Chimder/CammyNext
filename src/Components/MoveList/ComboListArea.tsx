@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import Combos from "./Combos";
-import { CharactersTypes } from "@/shared/Api/axios-hooks";
+import { useEffect, useState } from "react";
 import s from "./Combo.module.scss";
+import { CharactersTypes } from "@/shared/Api/axios-hooks";
+import Combos from "./Combos";
 
-export default function ComboListArea(combo: CharactersTypes) {
+export function ComboListArea(combo: CharactersTypes) {
   const [comboVid, setComboVid] = useState<string>();
   const [comboPod, setComboPod] = useState<string | undefined>();
 
-  // useEffect(() => {
-  //   setComboPod(combo?.video[0]?.comboName);
-  //   setComboVid(combo?.video[0]?.video);
-  // }, [combo]);
+  useEffect(() => {
+    setComboPod(combo?.video[0]?.comboName);
+    setComboVid(combo?.video[0]?.video);
+  }, [combo]);
 
   const handleClick = (data: React.MouseEvent<HTMLLIElement>) => {
     const target = data.target as HTMLElement;
     try {
-      const { video }: any = combo?.video?.find(
+      const { video }: any = combo.video?.find(
         (video) => video.comboName == target.innerText
       );
       setComboVid(video);
@@ -25,7 +25,7 @@ export default function ComboListArea(combo: CharactersTypes) {
     }
   };
 
-  const [videoStatus, setVideoStatus] = React.useState<number | unknown>();
+  const [videoStatus, setVideoStatus] = useState<number | unknown>();
 
   const changeVideoFix = () => {
     if (window.scrollY <= 480) {
@@ -42,20 +42,12 @@ export default function ComboListArea(combo: CharactersTypes) {
     window.addEventListener("scroll", changeVideoFix);
   });
 
-  // if (!combo) {
-  //   return (
-  //     <>
-  //       <div>not</div>
-  //     </>
-  //   );
-  // }
-
   return (
     <div className={s.SectionComboInto}>
       <div className={s.moveList_area}>
         <h4 className={s.moveList_h}>Special Moves</h4>
         <ul className={s.moveList_ul}>
-          {combo?.special?.map((data, index) => {
+          {combo.special?.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -69,7 +61,7 @@ export default function ComboListArea(combo: CharactersTypes) {
 
         <h4 className={s.moveList_h}>Super Arts</h4>
         <ul className={s.moveList_ul}>
-          {combo?.supel?.map((data, index) => {
+          {combo.supel?.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -83,7 +75,7 @@ export default function ComboListArea(combo: CharactersTypes) {
 
         <h4 className={s.moveList_h}>Unique Attacks</h4>
         <ul className={s.moveList_ul}>
-          {combo?.unique?.map((data, index) => {
+          {combo.unique?.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -96,7 +88,7 @@ export default function ComboListArea(combo: CharactersTypes) {
         </ul>
         <h4 className={s.moveList_h}>Throws</h4>
         <ul className={s.moveList_ul}>
-          {combo?.throws?.map((data, index) => {
+          {combo.throws?.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -109,7 +101,7 @@ export default function ComboListArea(combo: CharactersTypes) {
         </ul>
         <h4 className={s.moveList_h}>Common Moves</h4>
         <ul className={s.moveList_ul}>
-          {/* {combo.common.map((data, index) => {
+          {combo.common?.map((data, index) => {
             return (
               <Combos
                 {...data}
@@ -118,7 +110,7 @@ export default function ComboListArea(combo: CharactersTypes) {
                 click={handleClick}
               />
             );
-          })} */}
+          })}
         </ul>
       </div>
       <div
