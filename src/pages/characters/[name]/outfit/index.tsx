@@ -15,7 +15,7 @@ type NameProps = {
 };
 
 export const getStaticPaths = async () => {
-  const data = await prisma.character.findMany();
+  const data = await prisma.character.findMany({ select: { name: true } });
   const paths = data.map((character) => ({
     params: { name: character.name },
   }));
