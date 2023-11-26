@@ -10,19 +10,21 @@ export default async function handler(
   }
 
   try {
-    const character = await prisma.character
-      .findMany
-      //   {
-      //   include: {
-      //     video: true,
-      //     special: true,
-      //     common: true,
-      //     supel: true,
-      //     throws: true,
-      //     unique: true,
-      //   },
-      // }
-      ();
+    const character = await prisma.character.findMany({
+      select: {
+        name: true,
+      },
+    });
+    //   {
+    //   include: {
+    //     video: true,
+    //     special: true,
+    //     common: true,
+    //     supel: true,
+    //     throws: true,
+    //     unique: true,
+    //   },
+    // }
 
     res.status(200).json(character);
   } catch (error) {

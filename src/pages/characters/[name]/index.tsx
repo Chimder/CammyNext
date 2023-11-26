@@ -14,7 +14,7 @@ type NameProps = {
 };
 
 export const getStaticPaths = async () => {
-  const data = await prisma.character.findMany();
+  const data = await prisma.character.findMany({ select: { name: true } });
   const paths = data.map((character) => ({
     params: { name: character.name },
   }));
@@ -57,7 +57,6 @@ function Character({ data: characters }: NameProps) {
     backgroundImage: `url(../img/bg_${characters?.name}.webp)`,
     backgroundRepeat: "no-repeat",
   };
-
 
   return (
     <main className={s.Main_Character}>
