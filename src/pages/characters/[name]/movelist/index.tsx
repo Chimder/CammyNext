@@ -1,4 +1,4 @@
-import { CharactersTypes, getCharacter } from "@/shared/Api/axios-hooks";
+import { CharactersTypes } from "@/shared/Api/axios-hooks";
 import s from "./MoveList.module.scss";
 import prisma from "@/shared/lib/prisma";
 import { GetStaticProps } from "next";
@@ -25,8 +25,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
-    // const data = await getCharacter(params?.name as string);
-
     const data = await prisma.character.findUnique({
       where: {
         name: params?.name as string,
@@ -67,7 +65,7 @@ function CommandList({ data: combo }: NameProps) {
               key={combo?.name}
             >
               <span>
-                <img src={`/img/${combo?.name}.webp`} alt='' />
+                <img src={`/img/${combo?.name}.webp`} alt="" />
               </span>
             </div>
             <section className={s.Second_section}>
@@ -96,7 +94,7 @@ function CommandList({ data: combo }: NameProps) {
             </dd>
           </dl>
           <p className={s.BackBtn}>
-            <Link href='/characters'>
+            <Link href="/characters">
               <span>BACK TO LIST</span>
             </Link>
           </p>

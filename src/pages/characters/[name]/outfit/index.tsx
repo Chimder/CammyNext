@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useState } from "react";
-import { CharactersTypes, getCharacter } from "@/shared/Api/axios-hooks";
+import { CharactersTypes } from "@/shared/Api/axios-hooks";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import AsideBar from "@/Components/AsideBar/AsideBar";
@@ -27,7 +27,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
-    // const data = await getCharacter(params?.name as string);
     const data = await prisma.character.findUnique({
       where: {
         name: params?.name as string,
@@ -85,7 +84,7 @@ export default function Outfit({ data: characters }: NameProps) {
                 <Image
                   src={`/img/${characters.name}.webp`}
                   fill={true}
-                  alt=''
+                  alt=""
                 />
               </span>
             </div>
@@ -113,7 +112,7 @@ export default function Outfit({ data: characters }: NameProps) {
             </dd>
           </dl>
           <p className={s.BackBtn}>
-            <Link href='/characters'>
+            <Link href="/characters">
               <span>BACK TO LIST</span>
             </Link>
           </p>

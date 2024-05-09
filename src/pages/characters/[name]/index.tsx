@@ -6,7 +6,6 @@ import Link from "next/link";
 import { CharactersTypes } from "@/shared/Api/axios-hooks";
 import AsideBar from "@/Components/AsideBar/AsideBar";
 import CharacterCard from "@/Components/CharacterCard/CharacterCard";
-import { useParams, usePathname } from "next/navigation";
 import { GetStaticProps } from "next";
 import prisma from "@/shared/lib/prisma";
 type NameProps = {
@@ -26,8 +25,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
-    // const data = await getCharacter(params?.name as string);
-
     const data = await prisma.character.findUnique({
       where: {
         name: params?.name as string,
@@ -49,9 +46,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 function Character({ data: characters }: NameProps) {
-  const pathname = usePathname();
-  const param = useParams();
-
   const CH = 2;
   const backgr = {
     backgroundImage: `url(../img/bg_${characters?.name}.webp)`,
@@ -71,7 +65,7 @@ function Character({ data: characters }: NameProps) {
             key={characters?.name}
           >
             <span>
-              <Image src={`/img/${characters?.name}.webp`} fill={true} alt='' />
+              <Image src={`/img/${characters?.name}.webp`} fill={true} alt="" />
             </span>
           </div>
           <section className={s.Second_section}>
@@ -115,7 +109,7 @@ function Character({ data: characters }: NameProps) {
           </dd>
         </dl>
         <p className={s.BackBtn}>
-          <Link href='/characters'>
+          <Link href="/characters">
             <span>BACK TO LIST</span>
           </Link>
         </p>

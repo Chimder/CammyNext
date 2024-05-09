@@ -12,7 +12,7 @@ export default function Footer() {
       <section className={s.footer_section}>
         <p className={s.logo}>
           <span>
-            <Image src='/img/F_logo.webp' fill={true} alt='' />
+            <Image src="/img/F_logo.webp" fill={true} alt="" />
             <span></span>
           </span>
         </p>
@@ -24,25 +24,25 @@ export default function Footer() {
               <li>
                 <span>
                   <span></span>
-                  <Image src='/img/PS5.webp' width={90} height={24} alt='' />
+                  <Image src="/img/PS5.webp" width={90} height={24} alt="" />
                 </span>
               </li>
               <li>
                 <span>
                   <span></span>
-                  <Image src='/img/PS4.webp' width={90} height={24} alt='' />
+                  <Image src="/img/PS4.webp" width={90} height={24} alt="" />
                 </span>
               </li>
               <li>
                 <span>
                   <span></span>
-                  <Image src='/img/XBOX.webp' width={200} height={26} alt='' />
+                  <Image src="/img/XBOX.webp" width={200} height={26} alt="" />
                 </span>
               </li>
               <li>
                 <span>
                   <span></span>
-                  <Image src='/img/Steam.webp' width={100} height={26} alt='' />
+                  <Image src="/img/Steam.webp" width={100} height={26} alt="" />
                 </span>
               </li>
             </ul>
@@ -58,10 +58,10 @@ export default function Footer() {
           <li className={s.list_rating}>
             <span>"Rating"</span>
             <div>
-              <a href=''>
+              <a href="">
                 <span>
                   <span></span>
-                  <Image fill={true} src='/img/TEEN.webp' alt='' />
+                  <Image fill={true} src="/img/TEEN.webp" alt="" />
                 </span>
               </a>
             </div>
@@ -73,13 +73,13 @@ export default function Footer() {
         </p>
         <ul className={s.sns}>
           <li className={s.sns_tw}>
-            <a href='#'>Twitter</a>
+            <a href="#">Twitter</a>
           </li>
           <li className={s.sns_ig}>
-            <a href='#'>Instagram</a>
+            <a href="#">Instagram</a>
           </li>
           <li className={s.sns_site}>
-            <a href='#'>Street Fighter series Official Website</a>
+            <a href="#">Street Fighter series Official Website</a>
           </li>
         </ul>
       </section>

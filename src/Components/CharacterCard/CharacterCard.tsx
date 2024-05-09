@@ -3,7 +3,6 @@ import style from "./CharacterCard.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CharactersCards } from "@/shared/Data/CharactersCard";
-import { data } from "@/shared/xx/chun";
 
 type Type = {
   CH: number;
@@ -20,7 +19,6 @@ const CharacterCard = ({ CH }: Type) => {
   const leave = () => {
     setActive(false);
   };
-
 
   return (
     <>

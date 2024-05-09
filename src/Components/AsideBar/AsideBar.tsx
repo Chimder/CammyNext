@@ -1,11 +1,8 @@
 import Link from "next/link";
 import s from "./AsideBar.module.scss";
-import { useParams, usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 
 export default function AsideBar() {
-  const param = useParams();
-  const pathname = usePathname();
   const router = useRouter();
 
   return (
