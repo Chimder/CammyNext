@@ -3,7 +3,7 @@ import React from "react";
 import s from "./Character.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { CharactersTypes } from "@/shared/Api/axios-hooks";
+import { CharactersTypes } from "@/shared/Api/axios-api";
 import AsideBar from "@/Components/AsideBar/AsideBar";
 import CharacterCard from "@/Components/CharacterCard/CharacterCard";
 import { GetStaticProps } from "next";

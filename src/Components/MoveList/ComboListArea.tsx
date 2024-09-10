@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import s from "./Combo.module.scss";
-import { CharactersTypes } from "@/shared/Api/axios-hooks";
+import { CharactersTypes } from "@/shared/Api/axios-api";
 import Combos from "./Combos";
 
 export function ComboListArea(combo: CharactersTypes) {
@@ -40,6 +40,8 @@ export function ComboListArea(combo: CharactersTypes) {
   useEffect(() => {
     changeVideoFix();
     window.addEventListener("scroll", changeVideoFix);
+
+    return window.removeEventListener("scroll", changeVideoFix);
   });
 
   return (

@@ -1,6 +1,7 @@
-import { Combo } from "@/shared/Api/axios-hooks";
+import { Combo } from "@/shared/Api/axios-api";
 import s from "./Combo.module.scss";
 import clsx from "clsx";
+
 interface CombosProps extends Combo {
   podsvet?: string;
   click: (data: React.MouseEvent<HTMLLIElement>) => void;

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import style from "@/pages/characters/[name]/outfit/Outfit.module.scss";
-import { CharactersTypes } from "@/shared/Api/axios-hooks";
+import { CharactersTypes } from "@/shared/Api/axios-api";
 import { CostumeCards } from "./CostumeCard";
 import Image from "next/image";
 
@@ -74,7 +74,7 @@ export function OutfitSection({
                         <p>01</p>
                         <div>
                           <span>
-                            <Image key={index} src={card} alt='' fill={true} />
+                            <Image key={index} src={card} alt="" fill={true} />
                           </span>
                         </div>
                       </li>
@@ -84,7 +84,7 @@ export function OutfitSection({
                         <p>01</p>
                         <div>
                           <span>
-                            <Image key={index} src={card} alt='' fill={true} />
+                            <Image key={index} src={card} alt="" fill={true} />
                           </span>
                         </div>
                       </li>

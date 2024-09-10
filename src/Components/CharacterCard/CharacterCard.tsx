@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./CharacterCard.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,10 +7,20 @@ import { CharactersCards } from "@/shared/Data/CharactersCard";
 type Type = {
   CH: number;
 };
+
 const CharacterCard = ({ CH }: Type) => {
   const pathname = usePathname();
-
   const [active, setActive] = React.useState<number | boolean>(false);
+
+  useEffect(() => {
+    CharactersCards.forEach((card) => {
+      const imgActive = new Image();
+      imgActive.src = card.imgActive;
+
+      const imgNotActive = new Image();
+      imgNotActive.src = card.imgNotActive;
+    });
+  }, []);
 
   const enter = (i: number) => {
     setActive(i);
@@ -64,4 +74,5 @@ const CharacterCard = ({ CH }: Type) => {
     </>
   );
 };
+
 export default CharacterCard;

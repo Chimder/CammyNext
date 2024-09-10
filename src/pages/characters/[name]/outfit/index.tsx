@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useState } from "react";
-import { CharactersTypes } from "@/shared/Api/axios-hooks";
+import { CharactersTypes } from "@/shared/Api/axios-api";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import AsideBar from "@/Components/AsideBar/AsideBar";

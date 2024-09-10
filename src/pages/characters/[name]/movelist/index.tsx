@@ -1,4 +1,4 @@
-import { CharactersTypes } from "@/shared/Api/axios-hooks";
+import { CharactersTypes } from "@/shared/Api/axios-api";
 import s from "./MoveList.module.scss";
 import prisma from "@/shared/lib/prisma";
 import { GetStaticProps } from "next";
