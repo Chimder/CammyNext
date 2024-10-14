@@ -46,6 +46,7 @@ const CharacterCard = ({ CH }: Type) => {
           >
             <Link
               key={index}
+              rel="preload"
               className={
                 pathname === "/characters"
                   ? style.CharacterImg
